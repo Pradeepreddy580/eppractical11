@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id='employee' class='practical11_postlab.Employee'>
+		<property name='empId' value='61'></property>
+		<property name='empName' value='Pradeep'></property>
+		<property name='address' ref="add"></property>
+	</bean>
+	
+	
+	<bean id='add' class='practical11_postlab.Address'>
+		<property name='dno' value='153'></property>
+		<property name='street' value='Elm Street'></property> 
+		<property name='city' value='Nellore'></property> 
+		<property name='State' value='A.P'></property> 
+	</bean>
+</beans>
